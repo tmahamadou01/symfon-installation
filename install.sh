@@ -22,24 +22,30 @@ sudo chmod a+x /usr/local/bin/symfony
 echo "Enter le nom de votre projet:"
 read sitedir
 
-#On test l'existence du nouveau dossier creer
-#s'il n'existe pas :
-if [ ! -d ${sitedir} ]:
-then
-	#on lui demande a nouveau de creer
-    echo "Enter le nom de votre projet:"
-	read sitedir
-	#Sinon si le dossier existe
-else
-    #on installe Symfony dans le dossier
-    symfony new ${sitedir}
-fi
+#On creer le dossier
+sudo mkdir ${sitedir}
 
 #On attribut les droits
 sudo chmod -R 777 ${sitedir}
 
+#On test l'existence du nouveau dossier creer
+#s'il existe pas :
+if [ -d ${sitedir} ]:
+then
+	#on installe Symfony dans le dossier
+    symfony new ${sitedir}
+	#on lui demande a nouveau de creer
+    
+	#Sinon si le dossier existe
+else
+    echo "installation interrompu"
+fi
+
 #on execute cette commande pour entrer dans le dossier
 cd ${sitedir}
+
+#On install composer
+composer install
 
 #On clone le dossier bash avec le script
 git clone https://github.com/tmahamadou01/bash.git
