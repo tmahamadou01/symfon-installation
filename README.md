@@ -16,7 +16,7 @@ Faciliter l'installation d'un projet symfony sur une nouvelle machine.
 
 ## Installation
 
-Pour utiliser ce script , il suffit de l'executer a ta racine cet à dire dans le /var/www/html et faisant ./{le nom du script}.sh ou sh {le nom du script.sh}
+Pour utiliser ce script , il suffit de l'executer a ta racine cet à dire dans le [ /var/www/html ] et faisant ./{le nom du script}.sh ou sh {le nom du script.sh}
 
 ## Licence
 
