@@ -39,6 +39,7 @@ then
 	#Sinon si le dossier existe
 else
     echo "installation interrompu"
+    exit
 fi
 
 #on execute cette commande pour entrer dans le dossier
